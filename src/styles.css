@@ -1,7 +1,79 @@
-h1 {
+/*Base styles - mobile first*/
+body {
+  background: #272044;
   font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/cancun_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 12.5rem;
+  text-align: center;
+}
+
+header h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 96px;
-  line-height: 144px;
+  font-size: 5.5rem;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+header h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.3125rem;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+header a {
+  background: #fff;
+  color: #272044;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.1875rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*RESPONSIVE DESIGN*/
+
+/*Tablet and up*/
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+/*Desktop and up*/
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
