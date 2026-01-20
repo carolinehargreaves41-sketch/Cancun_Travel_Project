@@ -6,6 +6,21 @@ body {
   margin: 0;
 }
 
+.skip-link {
+  background: #272044;
+  color: #fff;
+  left: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  text-decoration: none;
+  top: -40px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .container {
   padding: 0;
   width: 100%;
@@ -15,6 +30,16 @@ body {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
+}
+
+.grid-places {
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+}
+
+.grid-3-columns-first-narrow {
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .card {
@@ -27,7 +52,7 @@ body {
 
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../images/cancun_background.jpg);
+    url("../images/cancun_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -119,12 +144,11 @@ main h3 {
 }
 
 main p {
-  color: #272044;
+  color: #555;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
-  opacity: 0.7;
   margin-bottom: 1rem;
 }
 
@@ -138,6 +162,8 @@ main p:last-child {
 .gallery {
   text-align: center;
 }
+
+/*Popular Places to Visit*/
 
 .card {
   background-color: #fff;
@@ -167,17 +193,24 @@ main p:last-child {
   text-align: left;
 }
 
-.card-body h4 {
+.card-body h3 {
   color: #272044;
-  font-size: 0.875rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.3125rem;
   margin: 0 0 0.5rem 0;
 }
 
+.card-body h4 {
+  color: #272044;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+}
+
 .card-body h5 {
   color: #272044;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin: 1rem 0 0.5rem 0;
 }
@@ -191,7 +224,7 @@ main p:last-child {
 }
 
 .card-footer {
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1rem 1rem 1rem;
   text-align: left;
 }
 
@@ -199,10 +232,10 @@ main p:last-child {
   background-color: #272044;
   color: #fff;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1875rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   text-decoration: none;
   text-transform: uppercase;
   transition: background 0.3s ease;
@@ -219,8 +252,46 @@ main p:last-child {
   width: 100%;
 }
 
-/*PHOTOS SECTION*/
-/*To be added next*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*GALLERY SECTION*/
+
+/*You Tube Embeds*/
+
+.grid-container-video {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item iframe {
+  width: 100%;
+  aspect-ratio: 21/9;
+  display: block;
+}
+
+/*Photos*/
+
+.grid-container-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
 
 /*FOOTER SECTION*/
 
@@ -320,6 +391,16 @@ footer a:hover {
 
   main h3 {
     font-size: 2.25rem;
+  }
+
+  .grid-container-video {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .grid-container-photos {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1.5rem;
   }
 
   .grid-3-columns-first-narrow {
