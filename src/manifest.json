@@ -1,0 +1,27 @@
+{
+  "name": "Discover Cancun - Mexico's Caribbean Paradise",
+  "short-name": "Cancun Guide",
+  "desciption": "Your guide to Cancun, Mexico - beaches, Mayan ruins, adventure parks, and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background-color": "#272044",
+  "theme-color": "#272044",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "tourism", "lifestyle"],
+  "lang": "en-UK",
+  "dir": "ltr"
+}

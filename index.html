@@ -1,17 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--PRECONNECT-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--DNS PREFETCH-->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
 
-    <!--SEO & METADATA-->
+    <!--PRECONNECT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--SEO AND METADATA-->
     <meta
       name="description"
-      content="A website dedicated to discovering the Mexican city of Cancun"
+      content="Discover Cancun, Mexico's Caribbean paradise. Explore white-sand beaches, ancient Mayan ruins, cenotes, and adventure parks. Travel guide with maps, photos and links to further information "
     />
 
     <meta
@@ -20,11 +26,11 @@
     />
     <meta
       property="og:description"
-      content="A website dedicated to discovering the Mexican city of Cancun - beaches, Mayan heritage, adventure parks, and more."
+      content="Discover Cancun's white-sand beaches, crystal-clear waters, vibrant nightlife, and rich Mayan heritage"
     />
     <meta
       property="og:image"
-      content="https://meek-granita-bd67b6.netlify.app//images/cancun_background.jpg"
+      content="https://meek-granita-bd67b6.netlify.app/images/cancun_background.jpg"
     />
     <meta
       property="og:url"
@@ -53,33 +59,37 @@
     />
     <link rel="canonical" href="https://meek-granita-bd67b6.netlify.app/" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--PWA Support-->
+    <meta name="theme-color" content="#272044" />
+    <link rel="manifest" href="/manifest.json" />
 
+    <!--Favicons for different devices-->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <!--GOOGLE FONTS-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
     <!--CUSTOM CSS-->
     <link rel="stylesheet" href="/src/styles.css" />
 
-    <title>Welcome to Cancun</title>
+    <title>Welcome to Cancun - Mexico's Caribbean Paradise</title>
   </head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <div class="container">
       <!-- HEADER SECTION -->
       <header>
         <p>.TRAVEL.</p>
         <h1>Welcome to Cancun</h1>
         <h2>Mexico's all-around gem</h2>
-        <a href="#learn-more">Learn more</a>
+        <a href="#learn-more" title="Learn more about Cancun">Learn more</a>
       </header>
 
       <main id="main-content">
@@ -87,17 +97,18 @@
           <div>
             <img
               src="/images/Cancun-Underwater.jpg"
-              alt="tropical-fishes-underwater"
+              alt="Colourful tropical fishes swimming in crystal-clear Caribbean waters"
               class="img-responsive"
               loading="lazy"
               height="600"
               width="800"
+              decoding="async"
             />
           </div>
 
           <!-- WHY CANCUN SECTION -->
           <div class="why-cancun">
-            <h2>Why Cancun?</h2>
+            <h2 id="learn-more">Why Cancun?</h2>
             <h3>A tropical paradise</h3>
             <p>
               Cancun is one of Mexico’s largest and most popular tourist
@@ -126,24 +137,21 @@
 
         <!-- PLACES SECTION -->
 
-        <!-- Popular Places to Visit -->
         <section class="secondary">
           <h2>PLACES</h2>
           <h3>Popular places to visit</h3>
 
           <div class="grid grid-places">
             <div class="card">
-              <!-- opens card -->
-
               <div class="card-header">
-                <!-- opens card-header -->
                 <img
                   src="/images/xcaret-park-sq1.jpg"
-                  alt="xcaret-adventure-park"
+                  alt="Xcaret adventure park with lush tropical vegetation and water attractions"
                   class="img-responsive"
                   loading="lazy"
                   height="600"
                   width="800"
+                  decoding="async"
                 />
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.1749116356796!2d-87.119698!3d20.5809134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e446dadd87053%3A0x8042e81e921809a5!2sXcaret%20Park!5e0!3m2!1sen!2suk!4v1768664879112!5m2!1sen!2suk"
@@ -152,15 +160,14 @@
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   sandbox="allow-scripts allow-same-origin"
-                  title="Google Map showing Xcaret Park location in Playa del Carmen"
+                  title="Interactive map showing Xcaret Park location in Playa del Carmen, Mexico"
+                  aria-label="Google Map of Xcaret Park"
                   class="embed"
                 ></iframe>
               </div>
-              <!-- closes card-header -->
               <div class="card-body">
-                <!-- opens card-body -->
-                <h3>XCARET PARK</h3>
-                <p>Adventure Park</p>
+                <h3>Xcaret Park</h3>
+                <p class="card-category">Adventure Park</p>
                 <h4>Address</h4>
                 <p lang="es">
                   Carretera Chetumal, Puerto Juarez km 282-Int B, Colonia Rancho
@@ -169,40 +176,35 @@
                 <h5>Why visit?</h5>
                 <p>
                   The crown jewel of Riviera Maya. Waterfront eco-archaeological
-                  park offering attractions such as snorkeling & cave
+                  park offering attractions such as snorkeling and cave
                   exploration.
                 </p>
               </div>
-              <!-- closes card-body -->
               <div class="card-footer">
-                <!-- opens card-footer -->
                 <a
                   href="https://www.xcaret.com"
                   class="btn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Visit Xcaret Park website"
                 >
                   Visit Xcaret Park website<span class="sr-only">
                     (opens in new tab)</span
                   >
                 </a>
               </div>
-              <!-- closes card-footer -->
             </div>
-            <!-- closes card -->
-
+            
             <div class="card">
-              <!-- opens card -->
-
               <div class="card-header">
-                <!-- opens card-header -->
                 <img
                   src="/images/chichen-Itza-sq1.jpg"
-                  alt="chichen-itza-mayan-ruin"
+                  alt="El Castillo pyramid at Chichen Itza, ancient Mayan archaeological site"
                   class="img-responsive"
                   loading="lazy"
                   height="600"
                   width="800"
+                  decoding="async"
                 />
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7465.276813077111!2d-88.567783!3d20.684285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138c6e391c0e7%3A0x7c1ea0a168994d9a!2zQ2hpY2jDqW4gSXR6w6E!5e0!3m2!1sen!2smx!4v1768666747092!5m2!1sen!2smx"
@@ -211,16 +213,14 @@
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   sandbox="allow-scripts allow-same-origin"
-                  title="Google Map showing Chichen Itza archaeological site location in Yucatan"
+                  title="Interactive map showing Chichen Itza archaeological site location in Yucatan, Mexico"
+                  aria-label="Google Map of Chichen Itza"
                   class="embed"
                 ></iframe>
               </div>
-              <!-- closes card-header -->
-
               <div class="card-body">
-                <!-- opens card-body -->
-                <h3>CHICHEN ITZA</h3>
-                <p>Archaeological site</p>
+                <h3>Chichen Itza</h3>
+                <p class="card-category">Archaeological site</p>
                 <h4>Address</h4>
                 <p lang="es">97751 Yucatan, Mexico</p>
                 <h5>Why visit?</h5>
@@ -229,36 +229,31 @@
                   world and a spectacular and mystical place to visit.
                 </p>
               </div>
-              <!-- closes card-body -->
               <div class="card-footer">
-                <!-- opens card-footer -->
                 <a
                   href="https://www.chichenitza.com/"
                   class="btn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Visit Chichen Itza website"
                 >
                   Visit Chichen Itza website<span class="sr-only">
                     (opens in new tab)</span
                   >
                 </a>
               </div>
-              <!-- closes card-footer -->
             </div>
-            <!-- closes card -->
-
+      
             <div class="card">
-              <!-- opens card -->
-
               <div class="card-header">
-                <!-- opens card-header -->
                 <img
                   src="/images/rio-secreto-sq1.jpg"
-                  alt="rio-secreto-nature-reserve"
+                  alt="Underground river at Rio Secreto nature reserve with stalactites and crystal-clear water"
                   class="img-responsive"
                   loading="lazy"
                   height="600"
                   width="800"
+                  decoding="async"
                 />
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7469.993760962454!2d-87.133882!3d20.588185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e440676ffd33d%3A0xd2da45166bae2994!2sR%C3%ADo%20Secreto!5e0!3m2!1sen!2sus!4v1768667433096!5m2!1sen!2sus"
@@ -267,15 +262,14 @@
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   sandbox="allow-scripts allow-same-origin"
-                  title="Google Map showing Rio Secreto nature reserve location in Playa del Carmen"
+                  title="Interactive map showing Rio Secreto nature reserve location in Playa del Carmen, Mexico"
+                  aria-label="Google Map of Rio Secreto"
                   class="embed"
                 ></iframe>
               </div>
-              <!-- closes card-header -->
               <div class="card-body">
-                <!-- opens card-body -->
-                <h3>RIO SECRETO</h3>
-                <p>Nature Reserve</p>
+                <h3>Rio Secreto</h3>
+                <p class="card-category">Nature Reserve</p>
                 <h4>Address</h4>
                 <p lang="es">
                   Carretera Federal Libre Chetumal – Puerto Juárez Km 283.5,
@@ -283,229 +277,208 @@
                 </p>
                 <h5>Why visit?</h5>
                 <p>
-                  Hiking & swimming excursions along a stunning turquoise
-                  underground river with thousands of stalactites & stalagmites.
+                  Hiking and swimming excursions along a stunning turquoise
+                  underground river with thousands of stalactites and stalagmites.
                 </p>
               </div>
-              <!-- closes card-body -->
               <div class="card-footer">
-                <!-- opens card-footer -->
                 <a
                   href="https://www.riosecreto.com/"
                   class="btn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Visit Rio Secreto website"
                 >
                   Visit Rio Secreto website<span class="sr-only">
                     (opens in new tab)</span
                   >
                 </a>
               </div>
-              <!-- closes card-footer -->
             </div>
-            <!-- closes card -->
           </div>
-          <!-- closes grid-places -->
         </section>
 
         <!-- GALLERY SECTION -->
 
-        <!-- YouTube Embeds -->
-
         <section class="gallery">
-          <div>
-            <!-- opens gallery -->
-            <h2>Gallery</h2>
-            <h3>Capturing the delights of Cancun</h3>
-
-            <div class="grid-container-video">
-              <!-- opens grid-container-video -->
-              <div class="item">
-                <!-- opens item -->
-                <iframe
+          <h2>Gallery</h2>
+          <h3>Capturing the delights of Cancun</h3>
+          <!--YouTube Videoa-->
+          <div class="grid-container-video">
+            <div class="video-wrapper">
+              <iframe
                   src="https://www.youtube.com/embed/zpmsUZTn6-E?si=LJTTLu65dVLA4fMP"
                   title="Video tour of Cancun beaches and attractions"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                   loading="lazy"
                 ></iframe>
               </div>
-              <!-- closes item -->
-              <div class="item">
-                <!-- opens item -->
+              <div class="video-wrapper">
                 <iframe
                   src="https://www.youtube.com/embed/1pWeEimEflM?si=nTo4IyFhieAuupQ9"
                   title="Exploring Mayan ruins and cenotes near Cancun"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow="
+                    accelerometer;
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    gyroscope;
+                    picture-in-picture;
+                    web-share;
+                  "
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                   loading="lazy"
                 ></iframe>
               </div>
-              <!-- closes item -->
             </div>
-            <!-- closes grid-container-video -->
-
+            
+            <!--Photo Gallery-->
             <div class="grid-container-photos">
-              <!-- Photos  -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/cancun-food-sq.jpg"
                   alt="Traditional Mexican tacos with fresh ingredients served in Cancun"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/cancun-celebrations-sq.jpg"
                   alt="Colorful traditional Mexican celebration with dancers in folkloric costumes"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/cancun-street-scene-sq.jpg"
                   alt="Vibrant street scene in downtown Cancun with local shops and pedestrians"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/Sea-Turtle-Aumal-sq.jpg"
                   alt="Sea turtle swimming in crystal-clear Caribbean waters near Cancun"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/Cenote-Ik-Kil-sq.jpg"
                   alt="Cenote Ik Kil natural swimming hole with hanging vines and turquoise water"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/MUSA_Underwater_Museum-sq.jpg"
                   alt="Underwater sculptures at MUSA museum with tropical fish swimming around"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/Cancun-sea-hotels-sq.jpg"
                   alt="Luxury beachfront hotels overlooking the turquoise Caribbean Sea in Cancun"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/Cancun-colourful_pottery-sq.jpg"
-                  alt="Colourful Mexican pottery"
+                  alt="Vibrant handcrafted Mexican pottery in traditional colours"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/puerto-morelos-catamaran-sq.jpg"
                   alt="Catamaran sailing on turquoise waters near Puerto Morelos"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/Mesoamerican-Barrier-Reef-sq.jpg"
                   alt="Colorful coral formations and tropical fish at the Mesoamerican Barrier Reef"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
-
+              <div class="photo-item">
                 <img
                   src="/images/cancun_dusk-sq.jpg"
                   alt="Cancun hotel zone at dusk with illuminated buildings along the coastline"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
-
-              <div class="item">
-                <!-- opens item -->
+              <div class="photo-item">
                 <img
                   src="/images/cancun-beach-scene-sq.jpg"
                   alt="White sandy beach with palm trees and beachgoers in Cancun"
                   class="img-responsive"
                   loading="lazy"
-                  height="600"
+                  height="800"
                   width="800"
+                  decoding="async"
                 />
               </div>
-              <!-- closes item -->
             </div>
-            <!-- closes grid-container-photos -->
           </div>
-          <!-- closes gallery -->
         </section>
       </main>
 
@@ -516,28 +489,32 @@
             <h3>More about Cancun</h3>
             <ul>
               <li>
-                <a href="https://www.govisitcancun.com/blog/" target="_blank">
+                <a href="https://www.govisitcancun.com/blog/" target="_blank" rel="noopener noreferrer"
+                  >Cancun Travel Blog<span class="sr-only">(opens in new tab)</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.govisitcancun.com/travel/" target="_blank">
+                <a href="https://www.govisitcancun.com/travel/" target="_blank" rel="noopener noreferrer"
+                  >Cancun Travel Guide<span class="sr-only">(opens in new tab)</span>
                 </a>
               </li>
               <li>
                 <a
                   href="https://www.govisitcancun.com/trip-planning/"
-                  target="_blank"
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  What to do in Cancun</a
-                >
+                  What to do in Cancun<span class="sr-only">(opens in new tab)</span>
+                </a>
               </li>
               <li>
                 <a
                   href="https://maps.app.goo.gl/G6Phtxw6rs22KSSC7"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Map of Cancun</a
-                >
+                  Map of Cancun<span class="sr-only">(opens in new tab)</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -545,7 +522,7 @@
           <div>
             <h3>About me</h3>
             <p>
-              Hi, I'm Caroline. I'm currently honing my coding and web
+              Hi, I'm Caroline Hargreaves. I'm honing my coding and web
               development skills through self-learning and hands-on projects
               with SheCodes.
             </p>
@@ -554,18 +531,27 @@
           <div>
             <h3>About this website</h3>
             <p>
-              This project was coded by Caroline Hargreaves and is
+              This project was coded by Caroline Hargreaves, is
               <a
                 href="https://github.com/carolinehargreaves41-sketch/Cancun_Travel_Project"
                 target="_blank"
-                >open-sourced.
-              </a>
-              <br />
+                rel="noopener noreferrer"
+                >open-sourced in GitHub</a
+              >, and
+              <a
+                href="https://meek-granita-bd67b6.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                hosted on Netlify</a
+              >
             </p>
           </div>
         </section>
       </footer>
     </div>
+
+    <!--Enhanced Structure Data for SEO-->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -573,11 +559,30 @@
         "name": "Cancun",
         "description": "Mexico's all-around gem offering white-sand beaches, crystal-clear turquoise waters, vibrant nightlife, and rich Mayan heritage.",
         "url": "https://meek-granita-bd67b6.netlify.app/",
-        "touristType": "Beach destination, Cultural tourism, Adventure travel",
-        "includedInDataCatalog": {
-          "@type": "TouristAttraction",
-          "name": "Xcaret Park"
-        }
+        "image": "https://meek-granita-bd67b6.netlify.app/images/cancun_background.jpg"
+        "touristType": ["Beach Tourism", "Cultural Tourism", Adventure Tourism", "Ecotourism"],
+        "geo":{
+          "@type":"GeoCoordinates",
+          "latitude":"21.1619",
+          "longitude":"-86.8515"
+        },
+        "TouristAttraction":[
+          {
+            "@type": "TouristAttraction",
+            "name": "Xcaret Park"
+            "description": "Eco-archaeological park offering snorkeling and cave exploration"
+          },
+                    {
+            "@type": "TouristAttraction",
+            "name": "Chichen Itza",
+            "description": "Ancient Mayan archaeological site and Wonder of the World"
+          },
+          {
+            "@type": "TouristAttraction",
+            "name": "Rio Secreto",
+            "description": "Underground river nature reserve with stalactites and stalagmites"
+          }
+        ]
       }
     </script>
   </body>
