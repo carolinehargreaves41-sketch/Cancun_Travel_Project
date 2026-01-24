@@ -13,6 +13,8 @@
     <!--PRECONNECT-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/src/styles.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" as="style" />
 
     <!--SEO AND METADATA-->
     <meta
@@ -61,16 +63,16 @@
 
     <!--PWA Support-->
     <meta name="theme-color" content="#272044" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/src/manifest.json" />
 
     <!--Favicons for different devices-->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
+   
     <!--GOOGLE FONTS-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
 
@@ -86,7 +88,7 @@
     <div class="container">
       <!-- HEADER SECTION -->
       <header>
-        <p>.TRAVEL.</p>
+        <p> ☼TRAVEL☼ </p>
         <h1>Welcome to Cancun</h1>
         <h2>Mexico's all-around gem</h2>
         <a href="#learn-more" title="Learn more about Cancun">Learn more</a>
@@ -96,11 +98,12 @@
         <section class="grid grid-2-columns">
           <div>
             <img
-              src="/images/Cancun-Underwater.jpg"
-              alt="Colourful tropical fishes swimming in crystal-clear Caribbean waters"
+              src="/images/tropical-paradise.jpg"
+              alt="Vibrant tropical beach scene with a fresh green coconut prepared as a drink, resting against the trunk of a tall palm tree."
               class="img-responsive"
-              loading="lazy"
-              height="600"
+              fetchpriority="high"
+              loading="eager"
+              height="800"
               width="800"
               decoding="async"
             />
@@ -145,7 +148,7 @@
             <div class="card">
               <div class="card-header">
                 <img
-                  src="/images/xcaret-park-sq1.jpg"
+                  src="/images/xcaret-park.jpg"
                   alt="Xcaret adventure park with lush tropical vegetation and water attractions"
                   class="img-responsive"
                   loading="lazy"
@@ -159,7 +162,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  sandbox="allow-scripts allow-same-origin"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
                   title="Interactive map showing Xcaret Park location in Playa del Carmen, Mexico"
                   aria-label="Google Map of Xcaret Park"
                   class="embed"
@@ -198,7 +201,7 @@
             <div class="card">
               <div class="card-header">
                 <img
-                  src="/images/chichen-Itza-sq1.jpg"
+                  src="/images/chichen-itza.jpg"
                   alt="El Castillo pyramid at Chichen Itza, ancient Mayan archaeological site"
                   class="img-responsive"
                   loading="lazy"
@@ -212,7 +215,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  sandbox="allow-scripts allow-same-origin"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
                   title="Interactive map showing Chichen Itza archaeological site location in Yucatan, Mexico"
                   aria-label="Google Map of Chichen Itza"
                   class="embed"
@@ -247,7 +250,7 @@
             <div class="card">
               <div class="card-header">
                 <img
-                  src="/images/rio-secreto-sq1.jpg"
+                  src="/images/rio-secreto.jpg"
                   alt="Underground river at Rio Secreto nature reserve with stalactites and crystal-clear water"
                   class="img-responsive"
                   loading="lazy"
@@ -261,7 +264,7 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  sandbox="allow-scripts allow-same-origin"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"
                   title="Interactive map showing Rio Secreto nature reserve location in Playa del Carmen, Mexico"
                   aria-label="Google Map of Rio Secreto"
                   class="embed"
@@ -307,6 +310,8 @@
           <div class="grid-container-video">
             <div class="video-wrapper">
               <iframe
+                  width="560"
+                  height="315"
                   src="https://www.youtube.com/embed/zpmsUZTn6-E?si=LJTTLu65dVLA4fMP"
                   title="Video tour of Cancun beaches and attractions"
                   allow="
@@ -319,12 +324,15 @@
                     web-share;
                   "
                   referrerpolicy="strict-origin-when-cross-origin"
+                  sandbox="allow-scripts allow-same-origin allow-presentation"
                   allowfullscreen
                   loading="lazy"
                 ></iframe>
               </div>
               <div class="video-wrapper">
                 <iframe
+                  width="560"
+                  height="315"
                   src="https://www.youtube.com/embed/1pWeEimEflM?si=nTo4IyFhieAuupQ9"
                   title="Exploring Mayan ruins and cenotes near Cancun"
                   allow="
@@ -337,6 +345,7 @@
                     web-share;
                   "
                   referrerpolicy="strict-origin-when-cross-origin"
+                  sandbox="allow-scripts allow-same-origin allow-presentation"
                   allowfullscreen
                   loading="lazy"
                 ></iframe>
@@ -347,7 +356,7 @@
             <div class="grid-container-photos">
               <div class="photo-item">
                 <img
-                  src="/images/cancun-food-sq.jpg"
+                  src="/images/cancun-food.jpg"
                   alt="Traditional Mexican tacos with fresh ingredients served in Cancun"
                   class="img-responsive"
                   loading="lazy"
@@ -358,7 +367,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/cancun-celebrations-sq.jpg"
+                  src="/images/cancun-celebrations.jpg"
                   alt="Colorful traditional Mexican celebration with dancers in folkloric costumes"
                   class="img-responsive"
                   loading="lazy"
@@ -369,7 +378,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/cancun-street-scene-sq.jpg"
+                  src="/images/cancun-street-scene.jpg"
                   alt="Vibrant street scene in downtown Cancun with local shops and pedestrians"
                   class="img-responsive"
                   loading="lazy"
@@ -380,7 +389,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/Sea-Turtle-Aumal-sq.jpg"
+                  src="/images/sea-turtle-aumal.jpg"
                   alt="Sea turtle swimming in crystal-clear Caribbean waters near Cancun"
                   class="img-responsive"
                   loading="lazy"
@@ -391,7 +400,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/Cenote-Ik-Kil-sq.jpg"
+                  src="/images/cenote-ik-kil.jpg"
                   alt="Cenote Ik Kil natural swimming hole with hanging vines and turquoise water"
                   class="img-responsive"
                   loading="lazy"
@@ -402,7 +411,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/MUSA_Underwater_Museum-sq.jpg"
+                  src="/images/musa_underwater_museum.jpg"
                   alt="Underwater sculptures at MUSA museum with tropical fish swimming around"
                   class="img-responsive"
                   loading="lazy"
@@ -413,7 +422,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/Cancun-sea-hotels-sq.jpg"
+                  src="/images/Cancun-sea-hotels.jpg"
                   alt="Luxury beachfront hotels overlooking the turquoise Caribbean Sea in Cancun"
                   class="img-responsive"
                   loading="lazy"
@@ -424,7 +433,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/Cancun-colourful_pottery-sq.jpg"
+                  src="/images/cancun-colorful-pottery.jpg"
                   alt="Vibrant handcrafted Mexican pottery in traditional colours"
                   class="img-responsive"
                   loading="lazy"
@@ -435,7 +444,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/puerto-morelos-catamaran-sq.jpg"
+                  src="/images/puerto-morelos-catamaran.jpg"
                   alt="Catamaran sailing on turquoise waters near Puerto Morelos"
                   class="img-responsive"
                   loading="lazy"
@@ -446,7 +455,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/Mesoamerican-Barrier-Reef-sq.jpg"
+                  src="/images/mesoamerican-barrier-reef.jpg"
                   alt="Colorful coral formations and tropical fish at the Mesoamerican Barrier Reef"
                   class="img-responsive"
                   loading="lazy"
@@ -457,7 +466,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/cancun_dusk-sq.jpg"
+                  src="/images/cancun-dusk.jpg"
                   alt="Cancun hotel zone at dusk with illuminated buildings along the coastline"
                   class="img-responsive"
                   loading="lazy"
@@ -468,7 +477,7 @@
               </div>
               <div class="photo-item">
                 <img
-                  src="/images/cancun-beach-scene-sq.jpg"
+                  src="/images/cancun-beach-scene.jpg"
                   alt="White sandy beach with palm trees and beachgoers in Cancun"
                   class="img-responsive"
                   loading="lazy"
@@ -559,17 +568,17 @@
         "name": "Cancun",
         "description": "Mexico's all-around gem offering white-sand beaches, crystal-clear turquoise waters, vibrant nightlife, and rich Mayan heritage.",
         "url": "https://meek-granita-bd67b6.netlify.app/",
-        "image": "https://meek-granita-bd67b6.netlify.app/images/cancun_background.jpg"
-        "touristType": ["Beach Tourism", "Cultural Tourism", Adventure Tourism", "Ecotourism"],
+        "image": "https://meek-granita-bd67b6.netlify.app/images/cancun_background.jpg",
+        "touristType": ["Beach Tourism", "Cultural Tourism", "Adventure Tourism", "Ecotourism"],
         "geo":{
           "@type":"GeoCoordinates",
           "latitude":"21.1619",
           "longitude":"-86.8515"
         },
-        "TouristAttraction":[
+        "includesAttraction":[
           {
             "@type": "TouristAttraction",
-            "name": "Xcaret Park"
+            "name": "Xcaret Park",
             "description": "Eco-archaeological park offering snorkeling and cave exploration"
           },
                     {
@@ -583,6 +592,18 @@
             "description": "Underground river nature reserve with stalactites and stalagmites"
           }
         ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://meek-granita-bd67b6.netlify.app/"
+        }]
       }
     </script>
   </body>
